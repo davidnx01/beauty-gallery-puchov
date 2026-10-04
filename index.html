@@ -1,0 +1,330 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>BEAUTY Gallery · salón krásy v Púchove — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh homepage pre BEAUTY Gallery, Ferka Urbánka 804, Púchov. Služby a ceny podané ako aukčný katalóg.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EFEEE9;--paper-2:#E4E2DA;--ink:#1C2420;--ink-2:rgba(28,36,32,.72);--ink-3:rgba(28,36,32,.5);
+  --hair:rgba(28,36,32,.17);--cloth:#1F2E28;--cloth-2:#2A3D35;--gold:#B8955A;--gold-2:#D9C08E;--blush:#D9C4B6;
+  --sc:"Cormorant SC",Georgia,serif;--sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16.5px/1.6 var(--sans);padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+@media (min-width:860px){body{padding-bottom:0}}
+img,svg{max-width:100%;height:auto;display:block}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.pg{width:min(1180px,100% - 40px);margin-inline:auto}
+.num{font-variant-numeric:tabular-nums lining-nums}
+.cap{font:600 11.5px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.ul{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+.ul:hover{background-size:100% 1px}
+
+.notice{background:var(--ink);color:var(--paper);font:500 13px/1.45 var(--sans);text-align:center;padding:9px 16px}
+
+/* hlavička ako titulná strana katalógu */
+.mast{border-bottom:1px solid var(--hair)}
+.mast .pg{display:flex;align-items:center;gap:30px;min-height:78px}
+.mark{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.mark b{font:600 27px/1 var(--sc);letter-spacing:.04em}
+.mark small{font:600 10px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--ink-3);margin-top:5px}
+.mast nav{display:flex;gap:26px;margin-left:auto}
+.mast nav a{font-size:15px;font-weight:500;padding:12px 0}
+.mast .tel{font:500 15px/1 var(--sans);color:var(--ink-2);padding:12px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;font:600 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);transition:background-color .2s,color .2s}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.solid:hover{background:var(--cloth-2);border-color:var(--cloth-2)}
+.btn.line:hover{background:var(--ink);color:var(--paper)}
+@media (max-width:980px){.mast nav{display:none}.mast .tel{margin-left:auto}}
+@media (max-width:620px){.mast .tel,.mast .btn{display:none}}
+
+/* obálka */
+.hero{padding:56px 0 64px;border-bottom:1px solid var(--hair)}
+.hero .pg{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:64px;align-items:center}
+.book{position:relative;max-width:470px;width:100%;justify-self:center;margin:0 14px 14px 0}
+.book::before,.book::after{content:"";position:absolute;inset:0;background:var(--paper);border:1px solid var(--hair)}
+.book::before{transform:translate(14px,14px)}
+.book::after{transform:translate(7px,7px)}
+.cover{position:relative;z-index:1;min-height:min(560px,78vh);padding:30px;color:var(--gold-2);
+  background:repeating-linear-gradient(45deg,rgba(255,255,255,.022) 0 1px,transparent 1px 3px),repeating-linear-gradient(-45deg,rgba(0,0,0,.09) 0 1px,transparent 1px 3px),linear-gradient(160deg,var(--cloth-2),var(--cloth) 60%);
+  box-shadow:inset 7px 0 0 rgba(0,0,0,.22),inset 9px 0 0 rgba(255,255,255,.05)}
+.frame{position:absolute;inset:22px 22px 22px 30px;border:1px solid rgba(217,192,142,.55);outline:1px solid rgba(217,192,142,.28);outline-offset:-6px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;padding:34px 22px 28px}
+.frame .cap{color:var(--gold-2);opacity:.85;font-size:10.5px;letter-spacing:.34em}
+.cover h1{margin:0;font:600 clamp(46px,6.2vw,74px)/.92 var(--sc);letter-spacing:.02em;color:#EAD9B2}
+.cover h1 span{display:block;font-size:.56em;letter-spacing:.24em;margin-top:.32em;color:var(--gold-2)}
+.cover .sea{font:500 23px/1.2 var(--sc);letter-spacing:.08em;margin:18px 0 0}
+.rule{display:flex;align-items:center;gap:12px;width:70%;margin:20px auto}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:rgba(217,192,142,.5)}
+.rule i{width:7px;height:7px;transform:rotate(45deg);border:1px solid var(--gold-2)}
+.cover .imp{font:400 13px/1.6 var(--sans);color:rgba(234,217,178,.8);letter-spacing:.04em}
+.intro .cap{color:var(--ink-3)}
+.intro blockquote{margin:16px 0 26px;font:500 clamp(28px,3.2vw,38px)/1.14 var(--sc);letter-spacing:.01em}
+.intro blockquote cite{display:block;margin-top:12px;font:italic 400 14px/1.4 var(--sans);color:var(--ink-3)}
+.colo{margin:0 0 30px;border-top:1px solid var(--hair)}
+.colo div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--hair);font-size:15.5px}
+.colo dt{font:600 11px/1.9 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.colo dd{margin:0}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:860px){.hero{padding:34px 0 48px}.hero .pg{grid-template-columns:1fr;gap:44px}}
+
+/* vrcholné položky */
+.lots{background:var(--cloth);color:#E9E3D3;padding:76px 0 82px}
+.shead{display:flex;align-items:end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:40px}
+.shead h2{margin:6px 0 0;font:500 clamp(36px,4.4vw,54px)/1 var(--sc);letter-spacing:.02em}
+.shead p{margin:0;max-width:420px;font-size:15px}
+.lots .cap{color:var(--gold-2)}
+.lots .shead p{color:rgba(233,227,211,.72)}
+.plates{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;list-style:none;margin:0;padding:0}
+.plate .mat{background:var(--paper);padding:16px;border:1px solid rgba(217,192,142,.4)}
+.plate .mat div{border:1px solid rgba(184,149,90,.6);aspect-ratio:4/5;display:grid;place-items:center;background:#F4F3EF}
+.plate svg{width:62%}
+.plate p{margin:16px 0 0;font-size:14.5px;line-height:1.45;color:rgba(233,227,211,.78)}
+.plate .ln{display:block;font:600 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2);margin-bottom:8px}
+.plate h3{margin:0 0 6px;font:600 23px/1.08 var(--sc);color:#F1E9D6;letter-spacing:.01em}
+.plate .est{display:flex;justify-content:space-between;border-top:1px solid rgba(217,192,142,.3);margin-top:12px;padding-top:10px;font-size:14px}
+.plate .est b{font-weight:600;color:#F1E9D6;font-size:16px}
+@media (max-width:980px){.plates{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.plates{gap:18px}.plate .mat{padding:10px}.plate h3{font-size:20px}.plate .est{flex-direction:column;gap:2px}}
+
+/* katalóg */
+.cat{padding:80px 0 30px}
+.cat .cap{color:var(--ink-3)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:14px;color:var(--ink-2);margin:0 0 34px;padding:14px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair)}
+.legend b{font-weight:600;color:var(--ink)}
+.cols{columns:2;column-gap:64px}
+.dep{break-inside:avoid;margin:0 0 40px}
+.dep h3{display:flex;align-items:baseline;gap:14px;margin:0 0 6px;font:600 26px/1.1 var(--sc);letter-spacing:.02em}
+.dep h3 small{font:600 11px/1 var(--sans);letter-spacing:.2em;color:var(--gold)}
+.dep ol{list-style:none;margin:0;padding:0}
+.dep li{display:grid;grid-template-columns:58px minmax(0,1fr) auto;gap:4px 14px;padding:12px 0;border-bottom:1px solid var(--hair)}
+.dep li .n{font:600 11.5px/1.75 var(--sans);letter-spacing:.12em;color:var(--ink-3)}
+.dep li .t{font-weight:500;line-height:1.35}
+.dep li .d{grid-column:2;font-size:13.5px;color:var(--ink-3)}
+.dep li .p{grid-row:1/span 2;grid-column:3;text-align:right;white-space:nowrap;font-weight:600;line-height:1.35}
+.dep li .p small{display:block;font:500 10.5px/1.6 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.tag{display:inline-block;margin-left:6px;padding:1px 7px;border:1px solid var(--gold);color:#7D6235;font:600 10px/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;vertical-align:2px}
+.src{font-size:13.5px;color:var(--ink-3);margin:0 0 10px}
+@media (max-width:860px){.cols{columns:1}}
+@media (max-width:460px){.dep li{grid-template-columns:40px minmax(0,1fr) auto;gap:2px 10px}.dep li .n{font-size:10px;letter-spacing:.04em;white-space:nowrap}.colo div{grid-template-columns:104px 1fr;gap:12px}}
+
+/* proveniencia */
+.prov{padding:56px 0 76px}
+.prov .pg{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;border-top:1px solid var(--ink);padding-top:44px}
+.prov h2{margin:6px 0 0;font:500 clamp(34px,4vw,48px)/1 var(--sc)}
+.prov .cap{color:var(--ink-3)}
+.prov p{margin:0 0 18px;font-size:17.5px;max-width:600px}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;margin:26px 0 0;padding:0;list-style:none}
+.facts li{padding:12px 0;border-top:1px solid var(--hair);font-size:15px}
+.facts span{display:block;font:600 10.5px/1.8 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+@media (max-width:860px){.prov .pg{grid-template-columns:1fr;gap:26px}}
+@media (max-width:460px){.facts{grid-template-columns:1fr}}
+
+/* posudky */
+.rev{background:var(--paper-2);padding:58px 0}
+.rev .pg{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:56px;align-items:center}
+.rev h2{margin:6px 0 0;font:500 clamp(30px,3.4vw,42px)/1.05 var(--sc)}
+.rev .cap{color:var(--ink-3)}
+.score{display:flex;align-items:baseline;gap:14px;border-left:1px solid var(--hair);padding-left:30px}
+.score b{font:500 68px/1 var(--sans);letter-spacing:-.02em}
+.score span{font-size:14px;line-height:1.4;color:var(--ink-2)}
+@media (max-width:860px){.rev .pg{grid-template-columns:1fr;gap:22px}.score{border-left:0;padding-left:0;border-top:1px solid var(--hair);padding-top:18px}}
+
+/* návšteva */
+.visit{padding:78px 0 70px}
+.visit .shead h2{font-weight:500}
+.visit .cap{color:var(--ink-3)}
+.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.vgrid>div{padding:24px 28px 28px 0;border-right:1px solid var(--hair)}
+.vgrid>div+div{padding-left:28px}
+.vgrid>div:last-child{border-right:0}
+.vgrid h3{margin:0 0 12px;font:600 11px/1.5 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.vgrid p{margin:0 0 10px}
+.vgrid .big{font:500 22px/1.3 var(--sans)}
+.vgrid a.ul{font-weight:500}
+@media (max-width:860px){.vgrid{grid-template-columns:1fr}.vgrid>div,.vgrid>div+div{padding:22px 0;border-right:0;border-bottom:1px solid var(--hair)}}
+
+footer{border-top:1px solid var(--ink);padding:28px 0 34px;font-size:13.5px;color:var(--ink-2)}
+footer .pg{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{font:600 18px/1 var(--sc);color:var(--ink);letter-spacing:.04em}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);border-top:1px solid var(--hair);padding-bottom:env(safe-area-inset-bottom);background-color:var(--paper)}
+.mbar a{display:flex;align-items:center;justify-content:center;min-height:58px;font:600 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+.mbar a:first-child{background:var(--ink);color:var(--paper)}
+@media (min-width:860px){.mbar{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+<div class="notice">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<header class="mast"><div class="pg">
+  <a class="mark" href="#top" aria-label="BEAUTY Gallery — úvod"><b>BEAUTY Gallery</b><small>Púchov · salón krásy</small></a>
+  <nav aria-label="Hlavná navigácia"><a class="ul" href="#vyber">Výber</a><a class="ul" href="#katalog">Katalóg</a><a class="ul" href="#salon">O salóne</a><a class="ul" href="#navsteva">Návšteva</a></nav>
+  <a class="tel ul num" href="tel:+421948617714">+421 948 617 714</a>
+  <a class="btn solid" href="https://www.notino.sk/salony/zd-beauty-bar/" target="_blank" rel="noopener">Rezervovať</a>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1"><div class="pg">
+  <div class="book">
+    <div class="cover"><div class="frame">
+      <span class="cap">Katalóg služieb · Púchov</span>
+      <div>
+        <h1 id="h1">Beauty<span>Gallery</span></h1>
+        <p class="sea">Výber sezóny</p>
+        <div class="rule" aria-hidden="true"><i></i></div>
+        <p class="imp">Vlasy · Farba · Zosvetlenie<br>Kúry · Nechty · Manikúra</p>
+      </div>
+      <span class="cap">32 položiek · ceny podľa Notino</span>
+    </div></div>
+  </div>
+  <div class="intro">
+    <span class="cap">Úvodom</span>
+    <blockquote>„BEAUTY Gallery je moderný salón krásy zameraný na prémiovú starostlivosť o vlasy“<cite>— z profilu salónu na Notino</cite></blockquote>
+    <dl class="colo">
+      <div><dt>Miesto</dt><dd>Ferka Urbánka 804, Púchov — v dvore budovy, 1. poschodie</dd></div>
+      <div><dt>Prehliadka</dt><dd>na objednanie, online alebo telefonicky</dd></div>
+      <div><dt>Hodnotenie</dt><dd class="num">5,0 ★ Notino (80) · 5,0 ★ Google (13)</dd></div>
+    </dl>
+    <div class="ctas">
+      <a class="btn solid" href="https://www.notino.sk/salony/zd-beauty-bar/" target="_blank" rel="noopener">Rezervovať na Notino</a>
+      <a class="btn line num" href="tel:+421948617714">Zavolať</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="lots" id="vyber" aria-labelledby="h-vyber"><div class="pg">
+  <div class="shead">
+    <div><span class="cap">Vrcholné položky</span><h2 id="h-vyber">Štyri loty z katalógu</h2></div>
+    <p>Výber pre tento návrh z ponuky salónu. Odhad je cena podľa profilu na Notino (4. 10. 2026); presná suma závisí od dĺžky a typu vlasov.</p>
+  </div>
+  <ul class="plates">
+    <li class="plate">
+      <div class="mat"><div>
+        <svg viewBox="0 0 120 150" aria-hidden="true"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2A22"/><stop offset=".45" stop-color="#6B4A33"/><stop offset="1" stop-color="#D8B57A"/></linearGradient></defs><g fill="none" stroke="url(#g1)" stroke-width="1.3" stroke-linecap="round"><path d="M52 6c-6 22 10 34 2 58s-16 40 0 76"/><path d="M58 6c-4 22 12 36 4 60s-14 38 2 74"/><path d="M64 6c-2 22 14 36 6 60s-12 40 4 74"/><path d="M70 6c0 22 14 38 6 62s-8 38 6 70"/><path d="M46 8c-8 22 6 34-2 56s-16 42-2 74"/><path d="M76 8c2 20 14 38 6 60s-4 38 8 68"/></g><path d="M44 6h34" stroke="#B8955A" stroke-width="1"/></svg>
+      </div></div>
+      <span class="ln num">Lot 12</span><h3>Balayage</h3>
+      <p>Freehand technika</p>
+      <div class="est num"><span>3 h – 4 h 20 m</span><b>70 – 100 €</b></div>
+    </li>
+    <li class="plate">
+      <div class="mat"><div>
+        <svg viewBox="0 0 120 150" aria-hidden="true"><defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A3528"/><stop offset=".55" stop-color="#B08C62"/><stop offset="1" stop-color="#EAD6AA"/></linearGradient></defs><g fill="none" stroke="url(#g2)" stroke-width="1.3" stroke-linecap="round"><path d="M50 6c-2 30 8 50 2 80s-6 40 6 58"/><path d="M57 6c0 30 8 52 3 80s-4 40 6 56"/><path d="M64 6c2 30 8 52 3 82s-2 38 6 54"/><path d="M71 6c3 28 8 52 3 82s0 36 6 52"/></g><g fill="#B8955A"><circle cx="88" cy="48" r="1.4"/><circle cx="95" cy="60" r="1"/><circle cx="86" cy="70" r="1.8"/><circle cx="99" cy="80" r="1.2"/><circle cx="91" cy="92" r="1"/><circle cx="34" cy="58" r="1.2"/><circle cx="28" cy="74" r="1.6"/><circle cx="36" cy="88" r="1"/></g><path d="M48 6h26" stroke="#B8955A"/></svg>
+      </div></div>
+      <span class="ln num">Lot 13</span><h3>Air Touch</h3>
+      <p>Zosvetľovanie vlasov technikou Air Touch <span class="tag">len tel.</span></p>
+      <div class="est num"><span>4 – 5 h</span><b>90 – 130 €</b></div>
+    </li>
+    <li class="plate">
+      <div class="mat"><div>
+        <svg viewBox="0 0 120 150" aria-hidden="true"><defs><linearGradient id="g3" gradientUnits="userSpaceOnUse" x1="44" y1="0" x2="78" y2="0"><stop offset="0" stop-color="#2F2420"/><stop offset=".5" stop-color="#5E4232"/><stop offset="1" stop-color="#2F2420"/></linearGradient></defs><g stroke="url(#g3)" stroke-width="1.2" stroke-linecap="round"><path d="M46 8v128"/><path d="M51 8v130"/><path d="M56 8v132"/><path d="M61 8v132"/><path d="M66 8v132"/><path d="M71 8v130"/><path d="M76 8v128"/></g><path d="M58 30v80" stroke="#F4F3EF" stroke-width="3" stroke-linecap="round" opacity=".85"/><path d="M42 8h38" stroke="#B8955A"/></svg>
+      </div></div>
+      <span class="ln num">Lot 15</span><h3>Laminácia vlasov</h3>
+      <p>Lamino K Build Up Plex</p>
+      <div class="est num"><span>1 h – 2 h 30 m</span><b>40 – 95 €</b></div>
+    </li>
+    <li class="plate">
+      <div class="mat"><div>
+        <svg viewBox="0 0 120 150" aria-hidden="true"><path d="M34 146V64c0-20 12-34 26-34s26 14 26 34v82" fill="none" stroke="#5E4A3E" stroke-width="1.3"/><path d="M44 76c0-16 7-26 16-26s16 10 16 26v14c0 6-7 10-16 10s-16-4-16-10z" fill="#D9C4B6" stroke="#8C6A55" stroke-width="1.1"/><path d="M52 62c2-5 5-7 8-7" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round"/><g stroke="#B8955A" stroke-width="1" stroke-linecap="round"><path d="M92 34v14M85 41h14"/><path d="M28 30v8M24 34h8"/></g></svg>
+      </div></div>
+      <span class="ln num">Lot 25</span><h3>Japonská manikúra</h3>
+      <p>P-Shine</p>
+      <div class="est num"><span>1 h</span><b>22 €</b></div>
+    </li>
+  </ul>
+</div></section>
+
+<section class="cat" id="katalog" aria-labelledby="h-kat"><div class="pg">
+  <div class="shead">
+    <div><span class="cap">Katalóg služieb</span><h2 id="h-kat">Všetky položky</h2></div>
+    <p class="src">Ceny a trvanie podľa profilu BEAUTY Gallery na Notino Salóny, 4. 10. 2026 — pred návštevou overiť.</p>
+  </div>
+  <div class="legend"><span><b>Lot</b> = služba</span><span><b>Odhad</b> = cena v € podľa Notino</span><span><b>Trvanie</b> = čas v kresle</span><span><span class="tag" style="margin:0">len tel.</span> = rezervácia len telefonicky</span></div>
+  <div class="cols num">
+    <div class="dep"><h3><small>I</small>Strih a styling</h3><ol>
+      <li><span class="n">Lot 01</span><span class="t">Strihanie vlasov bez umývania</span><span class="d">30 m – 1 h</span><span class="p"><small>Odhad</small>13 – 20 €</span></li>
+      <li><span class="n">Lot 02</span><span class="t">Strihanie vlasov s umývaním, sušením/fúkaním a konečným stylingom</span><span class="d">1 h – 1 h 45 m</span><span class="p"><small>Odhad</small>24 – 33 €</span></li>
+      <li><span class="n">Lot 03</span><span class="t">Umývanie vlasov so sušením/fúkaním a konečným stylingom</span><span class="d">45 m – 1 h 30 m</span><span class="p"><small>Odhad</small>14 – 22 €</span></li>
+      <li><span class="n">Lot 04</span><span class="t">Extra styling vlasov – žehlenie alebo vlny</span><span class="d">15 – 40 m</span><span class="p"><small>Odhad</small>5 – 15 €</span></li>
+    </ol></div>
+    <div class="dep"><h3><small>II</small>Farbenie s fúkanou</h3><ol>
+      <li><span class="n">Lot 05</span><span class="t">Farbenie jednotnej farby/odrastov s fúkaním a sušením</span><span class="d">1 h 20 m – 1 h 40 m</span><span class="p"><small>Odhad</small>35 – 50 €</span></li>
+      <li><span class="n">Lot 06</span><span class="t">Celoplošné farbenie vlasov s fúkaním/sušením a konečným stylingom</span><span class="d">1 h 40 m – 3 h 20 m</span><span class="p"><small>Odhad</small>40 – 55 €</span></li>
+      <li><span class="n">Lot 07</span><span class="t">Tónovanie (preliv) vlasov</span><span class="d">1 h – 1 h 45 m</span><span class="p"><small>Odhad</small>25 – 40 €</span></li>
+    </ol></div>
+    <div class="dep"><h3><small>III</small>Zosvetlenie a balayage</h3><ol>
+      <li><span class="n">Lot 08</span><span class="t">Melír do alobalu</span><span class="d">2 h 30 m – 4 h</span><span class="p"><small>Odhad</small>45 – 75 €</span></li>
+      <li><span class="n">Lot 09</span><span class="t">Čiastočný melír po vrchu hlavy a po kontúrach tváre</span><span class="d">1 h 40 m – 2 h 30 m</span><span class="p"><small>Odhad</small>30 – 45 €</span></li>
+      <li><span class="n">Lot 10</span><span class="t">Mikromelír (alobal)</span><span class="d">3 h – 4 h 20 m</span><span class="p"><small>Odhad</small>60 – 100 €</span></li>
+      <li><span class="n">Lot 11</span><span class="t">Tónovanie k zosvetľovacím procedúram</span><span class="d">30 – 45 m</span><span class="p"><small>Odhad</small>10 – 25 €</span></li>
+      <li><span class="n">Lot 12</span><span class="t">Balayage – freehand technika</span><span class="d">3 h – 4 h 20 m</span><span class="p"><small>Odhad</small>70 – 100 €</span></li>
+      <li><span class="n">Lot 13</span><span class="t">Zosvetľovanie vlasov AIR TOUCH technikou <span class="tag">len tel.</span></span><span class="d">4 – 5 h</span><span class="p"><small>Odhad</small>90 – 130 €</span></li>
+    </ol></div>
+    <div class="dep"><h3><small>IV</small>Kúry a head spa</h3><ol>
+      <li><span class="n">Lot 14</span><span class="t">Intenzívna regeneračná kúra EVAN CSP</span><span class="d">1 h 15 m – 2 h 40 m</span><span class="p"><small>Odhad</small>45 – 95 €</span></li>
+      <li><span class="n">Lot 15</span><span class="t">Laminácia vlasov LAMINO K BUILD UP PLEX</span><span class="d">1 h – 2 h 30 m</span><span class="p"><small>Odhad</small>40 – 95 €</span></li>
+      <li><span class="n">Lot 16</span><span class="t">Regeneračná maska na vlasy</span><span class="d">15 m</span><span class="p"><small>Odhad</small>5 – 10 €</span></li>
+    </ol></div>
+    <div class="dep"><h3><small>V</small>Modeláž nechtov</h3><ol>
+      <li><span class="n">Lot 17</span><span class="t">Nové nechty gélové</span><span class="d">1 h 30 m – 2 h</span><span class="p"><small>Odhad</small>45 – 50 €</span></li>
+      <li><span class="n">Lot 18</span><span class="t">Doplnenie gélových nechtov</span><span class="d">1 h – 1 h 30 m</span><span class="p"><small>Odhad</small>36 – 40 €</span></li>
+      <li><span class="n">Lot 19</span><span class="t">Polygel – doplnenie</span><span class="d">1 h – 1 h 30 m</span><span class="p"><small>Odhad</small>36 – 40 €</span></li>
+      <li><span class="n">Lot 20</span><span class="t">Odstránenie gélových nechtov</span><span class="d">30 m</span><span class="p"><small>Odhad</small>15 – 20 €</span></li>
+      <li><span class="n">Lot 21</span><span class="t">Oprava zlomeného nechtu</span><span class="d">15 – 45 m</span><span class="p"><small>Odhad</small>5 – 15 €</span></li>
+      <li><span class="n">Lot 22</span><span class="t">Nová modelácia gélom na ohryzené nechty</span><span class="d">3 h</span><span class="p"><small>Odhad</small>50 – 55 €</span></li>
+    </ol></div>
+    <div class="dep"><h3><small>VI</small>Manikúra</h3><ol>
+      <li><span class="n">Lot 23</span><span class="t">Prístrojová manikúra</span><span class="d">45 m</span><span class="p"><small>Odhad</small>18 €</span></li>
+      <li><span class="n">Lot 24</span><span class="t">Mokrá manikúra bez lakovania</span><span class="d">1 h</span><span class="p"><small>Odhad</small>25 – 28 €</span></li>
+      <li><span class="n">Lot 25</span><span class="t">Japonská manikúra P-Shine</span><span class="d">1 h</span><span class="p"><small>Odhad</small>22 €</span></li>
+      <li><span class="n">Lot 26</span><span class="t">Lakovanie nechtov na rukách gél lakom</span><span class="d">1 h – 1 h 20 m</span><span class="p"><small>Odhad</small>33 – 36 €</span></li>
+      <li><span class="n">Lot 27</span><span class="t">Pánska manikúra</span><span class="d">30 m – 1 h</span><span class="p"><small>Odhad</small>18 – 20 €</span></li>
+      <li><span class="n">Lot 28</span><span class="t">Peeling na ruky</span><span class="d">20 – 30 m</span><span class="p"><small>Odhad</small>8 €</span></li>
+      <li><span class="n">Lot 29</span><span class="t">Maska na ruky</span><span class="d">20 – 30 m</span><span class="p"><small>Odhad</small>8 €</span></li>
+      <li><span class="n">Lot 30</span><span class="t">Masáž rúk a predlaktia</span><span class="d">15 m</span><span class="p"><small>Odhad</small>8 €</span></li>
+    </ol></div>
+    <div class="dep"><h3><small>VII</small>Konzultácia a kurz</h3><ol>
+      <li><span class="n">Lot 31</span><span class="t">Konzultácia</span><span class="d">15 m</span><span class="p"><small>Odhad</small>5 €</span></li>
+      <li><span class="n">Lot 32</span><span class="t">Kurz modeláže nechtov <span class="tag">len tel.</span></span><span class="d">4 – 8 h</span><span class="p"><small>Odhad</small>100 – 300 €</span></li>
+    </ol></div>
+  </div>
+</div></section>
+
+<section class="prov" id="salon" aria-labelledby="h-prov"><div class="pg">
+  <div><span class="cap">Proveniencia</span><h2 id="h-prov">O salóne</h2></div>
+  <div>
+    <p>Salón v Púchove so zameraním na starostlivosť o vlasy — strih, farbenie, zosvetľovanie, balayage a regeneračné kúry — a na profesionálnu manikúru a modeláž nechtov. Podľa profilu na Notino pracuje s vlasovou kozmetikou talianskej značky SHOT.</p>
+    <ul class="facts">
+      <li><span>Vstup</span>v dvore budovy, 1. poschodie</li>
+      <li><span>Parkovanie</span>„Platené parkovanie možné priamo pred budovou“</li>
+      <li><span>Platba</span>hotovosť, karta</li>
+      <li><span>Darčekové poukazy</span>dostupné</li>
+      <li><span>Jazyky</span>slovenčina, čeština</li>
+      <li><span>Rezervácia</span>Notino Salóny alebo telefón</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="rev" aria-labelledby="h-rev"><div class="pg">
+  <div><span class="cap">Posudky</span><h2 id="h-rev">Plné hodnotenie na oboch portáloch</h2></div>
+  <div class="score num"><b>5,0</b><span>Notino<br>80 hodnotení · 4. 10. 2026</span></div>
+  <div class="score num"><b>5,0</b><span>Google<br>13 hodnotení · 1. 10. 2026</span></div>
+</div></section>
+
+<section class="visit" id="navsteva" aria-labelledby="h-nav"><div class="pg">
+  <div class="shead"><div><span class="cap">Návšteva</span><h2 id="h-nav">Kde salón nájdete</h2></div></div>
+  <div class="vgrid">
+    <div><h3>Adresa</h3><p class="big">Ferka Urbánka 804<br>020 01 Púchov</p><p>V dvore budovy, 1. poschodie.</p><a class="ul" href="https://www.google.com/maps/search/BEAUTY+Gallery+P%C3%BAchov" target="_blank" rel="noopener">Otvoriť v Google Maps →</a></div>
+    <div><h3>Rezervácia</h3><p class="big num"><a class="ul" href="tel:+421948617714">+421 948 617 714</a></p><p>Online cez profil na Notino Salóny.</p><a class="ul" href="https://www.notino.sk/salony/zd-beauty-bar/" target="_blank" rel="noopener">Profil na Notino →</a></div>
+    <div><h3>Otváracie hodiny</h3><p class="big">Na objednanie</p><p>Konkrétne dni a hodiny salón na profile neuvádza — termín si dohodnite telefonicky alebo online.</p></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="pg"><b>BEAUTY Gallery</b><span>Neoficiálny návrh webu · webdavid.sk · 2026</span></div></footer>
+
+<nav class="mbar" aria-label="Rýchle akcie"><a href="tel:+421948617714">Zavolať</a><a href="https://www.notino.sk/salony/zd-beauty-bar/" target="_blank" rel="noopener">Notino</a></nav>
